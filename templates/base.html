@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %} {% endblock %} Sign Up to Volunteer!</title>
+    <style>
+      .title {
+        margin: 5px;
+      }
+
+      body {
+        background-color: #b2bec3;
+        font-family: "Roboto", sans-serif;
+        color: #2d3436;
+        padding: 50px;
+      }
+
+      .create {
+        background-color: #f3f3f3;
+        padding: 30px;
+        height: 40vh;
+      }
+
+      .create p {
+        margin-bottom: 30px;
+      }
+
+      .create h1 {
+        margin-bottom: 50px;
+      }
+
+      .content {
+        margin: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .volunteer {
+        /* flex: 25%; */
+        padding: 20px;
+        margin: 5px;
+        background-color: #f3f3f3;
+        inline-size: auto;
+      }
+
+      .name a {
+        color: #00b894;
+        text-decoration: none;
+      }
+
+      nav a {
+        color: #2d3436;
+        font-size: 3em;
+        margin-left: 50px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="{{ url_for('index') }}">Roster</a>
+      <a href="{{ url_for('create') }}">Create</a>
+      <a href="#">About</a>
+    </nav>
+    <hr />
+    <div class="content">{% block content %} {% endblock %}</div>
+  </body>
+</html>

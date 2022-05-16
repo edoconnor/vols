@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="width: 100%">
+        {% block title %} Edit {{ volunteer.firstname }}
+                               {{ volunteer.lastname }}'s Details
+        {% endblock %}
+    </h1>
+    <form method="post">
+        <p>
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname"
+                   value={{ volunteer.firstname }}
+                   placeholder="First name">
+            </input>
+        </p>
+
+        <p>
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname"
+                   value={{ volunteer.lastname }}
+                   placeholder="Last name">
+            </input>
+        </p>
+
+        <p>
+            <label for="email">Email</label>
+            <input type="email" name="email"
+                   value={{ volunteer.email }}
+                   placeholder="volunteer email">
+            </input>
+        </p>
+
+        <p>
+            <label for="job">Job</label>
+            <select name="job">
+                <option disabled selected value="">edit job</option>
+                <option value="Registration">Registration</option>
+                <option value="Course Marshal">Course Marshal</option>
+                <option value="Water Stop">Water Stop</option>
+                <option value="Finish Line">Finish Line</option>
+                <option value="Party Set-Up">Party Set-Up</option>
+                <option value="Clean-Up">Clean-Up</option>
+            </select>
+        </p>
+
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<span class="title">
+  <h1>
+    {% block title %} {{ volunteer.firstname }} {{ volunteer.lastname }}{%
+    endblock %}
+  </h1>
+</span>
+<div class="content">
+  <div class="volunteer">
+    <p><b>#{{ volunteer.id }}</b></p>
+    <b>
+      <p class="name">{{ volunteer.firstname }} {{ volunteer.lastname }}</p>
+    </b>
+    <p>{{ volunteer.email }}</p>
+    <p>{{ volunteer.job }}</p>
+    <p>Registered: {{ volunteer.created_at }}</p>
+  </div>
+</div>
+{% endblock %}
